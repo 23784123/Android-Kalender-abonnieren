@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Kalender Abo</title>
+</head>
+<body>
+    <h2>Android Kalender abonnieren</h2>
+    <p>Erhalte alle Veranstaltungen, Informationen und Benachrichtigungen in deinem Kalender  </p>
+    <p>Natives Android Kalendersystem:</p>
+
+
+    <img src="A.png" alt="Android Kalender abonnieren" onclick="openNativeCalendarApp()" style="cursor:pointer; width:200px;">
+
+    <script>
+        function openNativeCalendarApp() {
+            const calendarUrl = "https://raw.githubusercontent.com/23784123/oeffentlicherKalaender/refs/heads/main/calendar.ics"
+
+            const intentUrl = `intent:${calendarUrl}#Intent;scheme=https;package=com.android.calendar;end;`;
+
+            window.location.href = intentUrl;
+        }
+    </script>
+
+</body>
+</html>
